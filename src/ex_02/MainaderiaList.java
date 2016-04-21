@@ -63,7 +63,18 @@ public class MainaderiaList implements Mainaderia {
          
            Després, podeu executar ProvaMainaderia per veure si el resultat
            que obteniu és el mateix que s'obtenia abans */
-    	return -1;
+
+    	Criatura c;
+    	Object o;  	
+    	Iterator it = contingut.iterator();
+    	int cont = 0;
+    	
+    	while (it.hasNext()) {
+    		o = it.next();
+    		c = (Criatura)o;
+    		if(c.getSexe() == sexe) cont++;
+    	}
+    	return cont;
     }
     
     // retorna la i-èssima criatura. Excepció si el paràmetre està fora
